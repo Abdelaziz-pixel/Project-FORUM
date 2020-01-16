@@ -3,7 +3,7 @@ from connection import *
 class NewAccount():
 
     def __init__(self):
-        self.Choice = connection()
+        self.choice = connection()
         self.name = None
         self.pseudo = None
         self.email = None
