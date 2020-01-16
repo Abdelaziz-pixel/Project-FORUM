@@ -2,14 +2,14 @@ from Modele.Model import *
 
 class View():
     """class for display all message """
-    
+
     def __init__(self):
         self.model = messageModel()
 
     def show_message(self):
         """display all messages """
         # get the messages from the model
-        messages = self.model.display_message()
+        messages = self.model.model_message()
         print('hello this is all message : ')
         if messages:
             for row in messages:
