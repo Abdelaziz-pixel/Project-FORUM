@@ -8,10 +8,12 @@ class connection():
     USER = "abdelaziz"
     PORT = "5432"
     DATABASE = "Forum"
+
     def __init__(self):
         # The class stores an instance of pyscopg2 connection and cursor classes
         self.connection = None
         self.cursor = None
+
     def initialize_connection(self):
         """Instanciate a connection and a cursor and store them in the related attributs"""
         try:
@@ -21,6 +23,7 @@ class connection():
             self.cursor = self.connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
         except (Exception, psycopg2.Error) as error :
             print ("Error while connecting to PostgreSQL", error)
+            
     def close_connection(self):
         """Close both connection and cursor"""
         if(self.connection):

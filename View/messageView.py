@@ -1,10 +1,10 @@
-from Modele.Model import *
+from Modele.messageModel import *
 
 class View():
     """class for display all message """
 
     def __init__(self):
-        self.model = messageModel()
+        self.model = Model()
 
     def show_message(self):
         """display all messages """

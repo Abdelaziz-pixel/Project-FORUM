@@ -1,8 +1,10 @@
+from Modele.connection import *
+
 class Model():
 
     def __init__(self):
         self.Choice = None 
-        self.Choice = connection 
+        self.Choice = connection()
 
     def model_message(self):
         self.Choice.initialize_connection()
@@ -11,7 +13,7 @@ class Model():
         self.Choice.close_connection()
         return view
 
-    def write_message():
+    def write_message(self, content, author):
         self.Choice.initialize_connection()
         self.Choice.cursor.execute("INSERT INTO Messages(content, publishing_date, author) VALUES (%s, NOW(), %s);",(content, author))
         self.Choice.connection.commit()
