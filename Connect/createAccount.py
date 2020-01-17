@@ -25,27 +25,3 @@ class NewAccount():
         self.choice.cursor.execute("INSERT INTO Users(name,firstname,pseudo,email,age,password) VALUES (%s,%s,%s,%s,%s,%s);",(self.name,self.firstname,self.pseudo,self.email,self.age,self.password))
         self.choice.connection.commit()
         self.choice.close_connection()
-
-    # def verify_age(self):
-    #     if age >= 18:
-    #         return self.create_user()
-    #     if age < 18:
-    #         print("Le forum est réservé au majeur, désoler !")
-
-<<<<<<< HEAD
-    # def verify_email(self,admail,email):
-    #     import smtplib
-    #     smtp = smtplib.SMTP(self.email)
-    #     res = smtp.verify(admail)
-    #     smtp.quit()
-    #     return res
-    
-=======
-    def verify_email(self,admail,email):
-        import smtplib
-        smtp = smtplib.SMTP(self.email)
-        res = smtp.verify(admail)
-        smtp.quit()
-        return res
-    
->>>>>>> 239126c1b3bb4cbf42478d995fb8947d836ded56
