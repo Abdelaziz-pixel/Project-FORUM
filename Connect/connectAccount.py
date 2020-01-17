@@ -8,5 +8,10 @@ class Account():
         self.password = None
 
     def connect_user(self):
-        self.peusdo = input("Quel es votre pseudo ? ")
+        self.pseudo = input("Quel es votre pseudo ? ")
         self.password = (input("Votre mot de passe : "))
+        self.choice.initialize_connection()
+        self.choice.cursor.execute("SELECT pseudo, password FROM Users WHERE pseudo = %s AND password = %s;",(self.pseudo,self.password))
+        raws = self.choice.cursor.fectall()
+
+        
