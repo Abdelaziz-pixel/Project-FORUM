@@ -32,6 +32,7 @@ class NewAccount():
     #     if age < 18:
     #         print("Le forum est réservé au majeur, désoler !")
 
+<<<<<<< HEAD
     # def verify_email(self,admail,email):
     #     import smtplib
     #     smtp = smtplib.SMTP(self.email)
@@ -39,3 +40,12 @@ class NewAccount():
     #     smtp.quit()
     #     return res
     
+=======
+    def verify_email(self,admail,email):
+        import smtplib
+        smtp = smtplib.SMTP(self.email)
+        res = smtp.verify(admail)
+        smtp.quit()
+        return res
+    
+>>>>>>> 239126c1b3bb4cbf42478d995fb8947d836ded56
